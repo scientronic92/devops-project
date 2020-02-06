@@ -1,0 +1,7 @@
+Error from server (AlreadyExists): deployments.apps "flaskapp" already exists
+NAME                        READY   STATUS    RESTARTS   AGE
+flaskapp-5c49498687-z9ffb   1/1     Running   0          34m
+Forwarding from 127.0.0.1:8081 -> 80
+Forwarding from [::1]:8081 -> 80
+Handling connection for 8081
+
