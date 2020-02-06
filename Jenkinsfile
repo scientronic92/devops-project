@@ -4,13 +4,13 @@ pipeline {
         stage('install dependencies') {
             steps {
 		sh "python3 -m venv ~/.devops"
+                sh "source ~/.devops/bin/activate"
 		sh "python3 -m pip install --upgrade pip"
 		sh "python3 -m pip install -r requirements.txt"
             }
         }
         stage('Lint python') {
             steps {
-                sh "source ~/.devops/bin/activate"
                 sh "pylint --disable=R,C,W1203 app.py"
             }
         }
