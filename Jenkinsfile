@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-		sh "python3 -m pip install venv"
+		sh "python3 -m pip install virtualenv"
 		sh "python3 -m venv ~/.devops"
 		sh "python3 -m pip install --upgrade pip"
 		sh "python3 -m pip install -r requirements.txt"
