@@ -4,8 +4,8 @@ pipeline {
         stage('install dependencies') {
 	    dir("/home/ubuntu") {
     		steps {
-		    sh "python3 -m venv /var/lib/jenkins/devops"
-		    sh "source /var/lib/jenkins/devops/bin/activate"
+		    sh "python3 -m venv devops"
+		    sh "source devops/bin/activate"
 		    sh "python3 -m pip install --upgrade pip"
 		    sh "python3 -m pip install -r requirements.txt"
 		}
