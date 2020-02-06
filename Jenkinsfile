@@ -8,22 +8,22 @@ pipeline {
         }
         stage('build docker') {
             steps {
-		sh "run_docker.sh"
+		sh "./run_docker.sh"
             }
         }
         stage('upload docker') {
             steps {
-		sh "upload_docker.sh"
+		sh "./upload_docker.sh"
             }
         }
         stage('run kops') {
             steps {
-		sh "run_kops.sh"
+		sh "./run_kops.sh"
             }
 	}
-        stage('run kops') {
+        stage('run kubernetes') {
             steps {
-		sh "run_kubernetes.sh"
+		sh "./run_kubernetes.sh"
             }
         }
     }
