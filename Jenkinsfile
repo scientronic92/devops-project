@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Lint python') {
             steps {
+                sh "source ~/.devops/bin/activate"
                 sh "pylint --disable=R,C,W1203 app.py"
             }
         }
