@@ -2,17 +2,21 @@ pipeline {
     agent any
     stages {
         stage('install dependencies') {
-            steps {
-		sh "python3 -m venv /var/lib/jenkins/devops"
-                sh "source /var/lib/jenkins/devops/bin/activate"
-		sh "python3 -m pip install --upgrade pip"
-		sh "python3 -m pip install -r requirements.txt"
-            }
+	    dir("/home/ubuntu") {
+    		steps {
+		    sh "python3 -m venv /var/lib/jenkins/devops"
+		    sh "source /var/lib/jenkins/devops/bin/activate"
+		    sh "python3 -m pip install --upgrade pip"
+		    sh "python3 -m pip install -r requirements.txt"
+		}
+	    }  
         }
         stage('Lint python') {
-            steps {
-                sh "pylint --disable=R,C,W1203 app.py"
-            }
+	    dir("/home/ubuntu") {
+	        steps {
+		    sh "pylint --disable=R,C,W1203 app.py"
+	        }
+	    }
         }
         stage('build docker') {
             steps {
