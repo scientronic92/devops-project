@@ -1,6 +1,14 @@
 pipeline {
     agent any
     stages {
+        stage('install dependencies') {
+            steps {
+		sh "pip3 install venv"
+		sh "python3 -m venv ~/.devops"
+		sh "pip install --upgrade pip"
+		sh "pip install -r requirements.txt"
+            }
+        }
         stage('Lint python') {
             steps {
                 sh "pylint --disable=R,C,W1203 app.py"
