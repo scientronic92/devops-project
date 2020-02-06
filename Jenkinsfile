@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-		sh "pip install venv"
+		sh "pip3 install venv"
 		sh "python3 -m venv ~/.devops"
-		sh "pip install --upgrade pip"
-		sh "pip install -r requirements.txt"
+		sh "pip3 install --upgrade pip"
+		sh "pip3 install -r requirements.txt"
             }
         }
         stage('Lint python') {
