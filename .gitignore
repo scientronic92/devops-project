@@ -2,3 +2,6 @@ ansible
 accessKeys.csv
 jenkins-pipeline
 main.retry
+venv
+__pycache__
+.vscode

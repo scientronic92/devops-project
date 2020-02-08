@@ -10,7 +10,6 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
-
 def scale(payload):
     """Scales Payload"""
 
@@ -18,7 +17,6 @@ def scale(payload):
     scaler = StandardScaler().fit(payload.astype(float))
     scaled_adhoc_predict = scaler.transform(payload.astype(float))
     return scaled_adhoc_predict
-
 
 @app.route("/")
 def home():
