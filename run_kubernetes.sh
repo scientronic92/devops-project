@@ -8,7 +8,7 @@ dockerpath=scientronic92/flaskapp:4
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl create deployment flaskapp --image=scientronic92/flaskapp:4 --state=s3://mykops-state-cluster --yes
+kubectl create deployment flaskapp --image=scientronic92/flaskapp:4
 
 # Step 3:
 # List kubernetes pods
