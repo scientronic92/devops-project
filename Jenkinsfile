@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pylint') {
             steps {
-		sh "python3 -m pip install -r requirements"
+		sh "python3 -m pip install -r requirements.txt"
                 sh "pylint --disable=R,C,W1203 app.py"
             }
         }
