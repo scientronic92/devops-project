@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Pylint') {
+            steps {
+		sh "python3 -m pip install -r requirements"
+                sh "pylint --disable=R,C,W1203 app.py"
+            }
+        }
         stage('build docker') {
             steps {
 		sh "./run_docker.sh"
