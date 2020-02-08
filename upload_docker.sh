@@ -17,4 +17,4 @@ docker tag flaskapp:2.0 scientronic92/flaskapp:2.0
 # Step 3:
 # Push image to a docker repository
 
-docker push scientronic92/flaskapp:2.0
+docker push flaskapp:2.0 scientronic92/flaskapp
