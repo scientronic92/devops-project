@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('build docker') {
             steps {
-		sh "sudo ./run_docker.sh"
+		sh "./run_docker.sh"
             }
         }
         stage('upload docker') {
             steps {
-		sh "sudo ./upload_docker.sh"
+		sh "./upload_docker.sh"
             }
         }
         stage('run kops') {
             steps {
-		sh "sudo ./run_kops.sh"
+		sh "./run_kops.sh"
             }
 	}
         stage('run kubernetes') {
             steps {
-		sh "sudo ./run_kubernetes.sh"
+		sh "./run_kubernetes.sh"
             }
         }
     }
