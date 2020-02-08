@@ -1,20 +1,17 @@
-#!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
 
-# Assumes that an image is built via `run_docker.sh`
+## Complete the following steps to get Docker running locally
 
 # Step 1:
-# Create dockerpath
+# Build image and add a descriptive tag
 
-dockerpath=scientronic92/flaskapp:2.0
+docker build -t flaskapp:2.0 .
 
-# Step 2:  
-# Authenticate & tag
+# Step 2: 
+# List docker images
 
-echo "Docker ID and Image: $dockerpath"
-docker tag flaskapp:2.0 scientronic92/flaskapp:2.0
+docker ps
 
-# Step 3:
-# Push image to a docker repository
+# Step 3: 
+# Run flask app
 
-docker push scientronic92/flaskapp:2.0
+docker run -p 8081:80 -t flaskapp:2.0
