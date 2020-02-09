@@ -17,5 +17,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-
-kubectl port-forward deployment/flaskapp 8081:80
+sleep 600
+kubectl port-forward deployment/flaskapp 8082:80
