@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pylint') {
             steps {
-		sh "python3 -m pip install -r requirements.txt"
+		//sh "python3 -m pip install -r requirements.txt"
                 sh "python3 -m pylint --disable=R,C,W1203 app.py"
             }
         }
@@ -25,7 +25,7 @@ pipeline {
 	}*/
         stage('run eksctl') {
             steps {
-		sh "sudo ./create-cluster.sh"
+		sh "./create-cluster.sh"
             }
         }	
         stage('run kubernetes') {
