@@ -25,7 +25,7 @@ pipeline {
 	}*/
         stage('run eksctl') {
             steps {
-		sh "./create-cluster.sh"
+		sh "sudo ./create-cluster.sh"
             }
         }	
         stage('run kubernetes') {
