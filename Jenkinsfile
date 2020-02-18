@@ -17,11 +17,17 @@ pipeline {
 		sh "./upload_docker.sh"
             }
         }
-        stage('run kops') {
+/*creating cluster with kops:    
+	stage('run kops') {
             steps {
 		sh "./run_kops.sh"
             }
-	}
+	}*/
+        stage('run eksctl') {
+            steps {
+		sh "./create-cluster.sh"
+            }
+        }	
         stage('run kubernetes') {
             steps {
 		sh "./run_kubernetes.sh"
