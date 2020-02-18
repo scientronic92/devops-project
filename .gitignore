@@ -1,6 +1,8 @@
 accessKeys.csv
 jenkins-pipeline
-main.retry
 venv
 __pycache__
 .vscode
+kops.pem
+jenkins.pem
+ec2.pem
