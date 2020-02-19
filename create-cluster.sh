@@ -13,7 +13,6 @@ eksctl create cluster \
 --nodes-min 2 \
 --nodes-max 2 \
 --ssh-access \
---ssh-public-key /home/ubuntu/.ssh/id_rsa.pub \
 --managed
 
 # Step 2:
