@@ -17,12 +17,6 @@ pipeline {
 		sh "./upload_docker.sh"
             }
         }
-/*creating cluster with kops:    
-	stage('run kops') {
-            steps {
-		sh "./run_kops.sh"
-            }
-	}*/
         stage('run eksctl') {
             steps {
 		sh "./create-cluster.sh"
