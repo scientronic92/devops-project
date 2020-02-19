@@ -14,8 +14,7 @@ eksctl create cluster \
 --nodes-max 2 \
 --ssh-access \
 --ssh-public-key /home/ubuntu/.ssh/id_rsa.pub \
---managed \ 
---auto-kubeconfig
+--managed
 
 # Step 2:
 # updating configuration
