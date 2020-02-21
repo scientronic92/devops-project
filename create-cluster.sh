@@ -9,8 +9,8 @@ eksctl create cluster \
 --region us-west-2 \
 --nodegroup-name standard-workers \
 --node-type t2.micro \
---nodes 2 \
---nodes-min 2 \
+--nodes 4 \
+--nodes-min 4 \
 --nodes-max 4 \
 --ssh-access \
 --managed
@@ -19,3 +19,7 @@ eksctl create cluster \
 # updating configuration
 
 aws eks update-kubeconfig --name k8s-test
+
+# in case you need to update the number of worker nodes:
+# aws eks update-nodegroup-config --cluster-name k8s-test --nodegroup-name standard-workers --scaling-config=4
+
