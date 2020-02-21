@@ -11,7 +11,7 @@ eksctl create cluster \
 --node-type t2.micro \
 --nodes 2 \
 --nodes-min 2 \
---nodes-max 2 \
+--nodes-max 4 \
 --ssh-access \
 --managed
 
