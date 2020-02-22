@@ -9,9 +9,9 @@ eksctl create cluster \
 --region us-west-2 \
 --nodegroup-name standard-workers \
 --node-type t2.micro \
---nodes 2 \
---nodes-min 2 \
---nodes-max 2 \
+--nodes 4 \
+--nodes-min 4 \
+--nodes-max 4 \
 --ssh-access \
 --managed
 
