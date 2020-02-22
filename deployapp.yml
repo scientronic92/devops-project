@@ -6,6 +6,11 @@ metadata:
     app: flaskapp
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: flaskapp
@@ -20,4 +25,5 @@ spec:
           ports:
           - name: flask-port
             containerPort: 80
+    
 
