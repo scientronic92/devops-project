@@ -11,6 +11,16 @@
 ansible-playbook main.yml -i inventory
 ```
 - now your machine is ready to configure Jenkins
-- install blueocean and S3 plugins
-- 
+- install blueocean
+- add aws and docker credentials, you can either add it in jenkins credentials or in the management server terminal run:
+```
+sudo -i
+su jenkins
+aws configure
+docker login --username <username>
+```
+2) add management server ip with jenkins port to github repository webhook
+3) from blue ocean add the pipeline
+4) to update the deployed kubernetes you can use the second pipeline:
+https://github.com/scientronic92/updating-kubernetes-pipeline
 
