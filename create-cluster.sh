@@ -12,8 +12,7 @@ eksctl create cluster \
 --nodes 4 \
 --nodes-min 4 \
 --nodes-max 4 \
---ssh-access \
---managed
+--ssh-access 
 
 # Step 2:
 # updating configuration
